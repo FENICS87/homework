@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/css.css">
+
+</head>
+
+<body>
+
+<section class="todoapp">
+    <header class="header">
+        <h1>todos</h1>
+        <input class="new-todo" placeholder="What needs to be done?" autofocus="">
+    </header>
+    <section class="main" style="display: block;">
+        <input id="toggle-all" class="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list">
+        </ul>
+    </section>
+    <footer class="footer" style="display: block;">
+        <span class="todo-count"><strong>0</strong> items left</span>
+        <ul class="filters">
+            <li>
+                <a class="all">All</a>
+            </li>
+            <li>
+                <a class="active">Active</a>
+            </li>
+            <li>
+                <a class="completed">Completed</a>
+            </li>
+        </ul>
+        <button class="clear-completed" style="display: none;"></button>
+    </footer>
+</section>
+
+<script>
+let zzz = new Calculator();
+ console.log(zzz.calculator("7 + 7"));
+function Calculator(){
+     let metod = {
+        "+": (a,b)=> a+b,
+        "-": (a,b)=> a-b,
+    }
+   this.calculator = function(arg){
+    let split = arg.split(" "),
+        a = +split[0],
+        b = +split[2],
+        c = split[1];    
+        if(!metod[c]||isNaN(a)||isNaN(b)){
+        return NaN
+        }
+        return metod[c](a,b);
+         
+   }
+
+}
+
+
+
+</script>
+
+</html>
+ </script>
+  <script src="js/js2.js" defer></script>
+</body>
+</html>
+<!--
+function Calculator(){
+	let znak={
+	"+": (a,b)=>a+b,
+	"-": (a,b)=>a-b,
+	}
+	this.calculate = function(arg) {
+		let split = arg.split(" "),
+		a=+split[0],
+		b=+split[2],
+		c=split[1];
+		if(!znak[c]||isNaN(a)||isNaN(b)) return NaN;
+		return znak[c](a,b);
+	}
+
+-->
